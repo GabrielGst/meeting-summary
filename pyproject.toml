@@ -1,0 +1,24 @@
+[project]
+name = "video-audio-to-text"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Gabriel Gostiaux", email = "gabriel.gostiaux@free.fr" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "faster-whisper>=1.2.1",
+    "nvidia-cublas-cu12>=12.9.2.10",
+    "nvidia-cudnn-cu12>=9.25.1.1",
+    "ollama>=0.6.2",
+    "torch>=2.14.0",
+    "yt-dlp>=2026.8.19",
+]
+
+[project.scripts]
+video-audio-to-text = "video_audio_to_text:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
